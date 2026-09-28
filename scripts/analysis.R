@@ -53,4 +53,21 @@ ggplot(revenue_by_product, aes(x = product, y = total_revenue)) +
   ) +
   theme_minimal()
 
+# --- Units sold by region ---
+units_by_region <- sales %>%
+  group_by(region) %>%
+  summarise(total_units = sum(units_sold), .groups = "drop") %>%
+  arrange(desc(total_units))
+
+print(units_by_region)
+
+ggplot(units_by_region, aes(x = reorder(region, -total_units), y = total_units)) +
+  geom_col(fill = "purple") +
+  labs(
+    title = "Units Sold by Region",
+    x = "Region",
+    y = "Units"
+  ) +
+  theme_minimal()
+
 
