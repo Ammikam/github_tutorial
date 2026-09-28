@@ -12,7 +12,7 @@ sales <- read.csv("data/sales_sample.csv")
 str(sales)
 summary(sales)
 
-# --- Total revenue by region ---
+# --- Total revenue by region (edited on GitHub) ---
 revenue_by_region <- sales %>%
   group_by(region) %>%
   summarise(total_revenue = sum(revenue), .groups = "drop") %>%
