@@ -43,5 +43,14 @@ revenue_by_product <- sales %>%
   arrange(desc(total_revenue))
 
 print(revenue_by_product)
+# --- Plot: revenue by product ---
+ggplot(revenue_by_product, aes(x = product, y = total_revenue)) +
+  geom_col(fill = "darkorange") +
+  labs(
+    title = "Total Revenue by Product",
+    x = "Product",
+    y = "Revenue (KES)"
+  ) +
+  theme_minimal()
 
 
