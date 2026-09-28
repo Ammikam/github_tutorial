@@ -38,5 +38,14 @@ sales %>%
   theme_minimal()
 ```
 
+## Revenue by product
+
+```{r revenue-by-product}
+sales %>%
+  group_by(product) %>%
+  summarise(total_revenue = sum(revenue), .groups = "drop") %>%
+  arrange(desc(total_revenue))
+```
+
 <!-- Tutorial note: knitting this produces report.html — notice it's excluded
      by .gitignore, since rendered output shouldn't be committed. -->
