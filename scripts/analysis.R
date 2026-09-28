@@ -20,7 +20,7 @@ revenue_by_region <- sales %>%
 
 print(revenue_by_region)
 
-# --- Total revenue by region (edited locally) ---
+# --- Total revenue by region  ---
 ggplot(revenue_by_region, aes(x = reorder(region, -total_revenue), y = total_revenue)) +
   geom_col(fill = "steelblue") +
   labs(
