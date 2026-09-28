@@ -32,7 +32,7 @@ ggplot(revenue_by_region, aes(x = reorder(region, -total_revenue), y = total_rev
 
 # TODO (tutorial exercise): add a second summary, e.g. revenue by product,
 # commit it, push it, and open a pull 
-# --- Total revenue by product ---
+# --- Total revenue by region (edited on GitHub) ---
 revenue_by_product <- sales %>%
   group_by(product) %>%
   summarise(
