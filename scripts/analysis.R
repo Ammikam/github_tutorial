@@ -1,4 +1,5 @@
 # analysis.R
+# Edited by: Ammikam
 # Simple exploratory analysis of weekly sales data
 # This is the script people will edit during the Git tutorial
 
