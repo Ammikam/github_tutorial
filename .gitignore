@@ -1,0 +1,33 @@
+# --- RStudio / R specific ---
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Session/workspace files
+*.Rproj.user
+
+# --- Rendered output from R Markdown / Quarto ---
+*.html
+*.pdf
+!README.pdf
+report_cache/
+report_files/
+*_cache/
+*_files/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Environment / secrets ---
+.Renviron
+.env
+
+# --- Large or generated data (uncomment if your real data is big/sensitive) ---
+# data/raw/
+# *.csv
+
+# --- Package management (if using renv) ---
+renv/library/
+renv/staging/

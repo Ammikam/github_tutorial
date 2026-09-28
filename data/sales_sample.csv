@@ -1,0 +1,11 @@
+date,region,product,units_sold,revenue
+2026-01-05,Nairobi,Widget A,120,60000
+2026-01-05,Mombasa,Widget A,80,40000
+2026-01-12,Nairobi,Widget B,45,33750
+2026-01-12,Kisumu,Widget A,60,30000
+2026-01-19,Nairobi,Widget B,90,67500
+2026-01-19,Mombasa,Widget B,55,41250
+2026-01-26,Kisumu,Widget A,70,35000
+2026-01-26,Nairobi,Widget A,150,75000
+2026-02-02,Mombasa,Widget A,95,47500
+2026-02-02,Kisumu,Widget B,40,30000

@@ -1,0 +1,42 @@
+---
+title: "Weekly Sales Report"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(dplyr)
+library(ggplot2)
+```
+
+## Load data
+
+```{r load-data}
+sales <- read.csv("data/sales_sample.csv")
+head(sales)
+```
+
+## Revenue by region
+
+```{r revenue-by-region}
+sales %>%
+  group_by(region) %>%
+  summarise(total_revenue = sum(revenue), .groups = "drop") %>%
+  arrange(desc(total_revenue))
+```
+
+## Plot
+
+```{r plot-revenue}
+sales %>%
+  group_by(region) %>%
+  summarise(total_revenue = sum(revenue), .groups = "drop") %>%
+  ggplot(aes(x = reorder(region, -total_revenue), y = total_revenue)) +
+  geom_col(fill = "darkgreen") +
+  labs(title = "Revenue by Region", x = "Region", y = "Revenue (KES)") +
+  theme_minimal()
+```
+
+<!-- Tutorial note: knitting this produces report.html — notice it's excluded
+     by .gitignore, since rendered output shouldn't be committed. -->
